@@ -32,6 +32,8 @@ nav {
 
 nav ul {
     box-shadow: 1px 1px 10px 1px #6998AB;
+    border-top-right-radius: 0% !important;
+   
 }
 
 nav li {
@@ -45,15 +47,17 @@ nav a {
     padding: 12px;
     text-decoration: none;
     border-radius: 4px;
+    font-size: 1.2rem;
 }
 
 nav .active {
     background-color: #406882 !important;
-    color: #b7c9d0 !important;
+    color: #eaf0f3 !important;
 }
 
 nav a:hover {
     background-color: #81c2e2;
+    color: #eef9fd;
 
 }
 
