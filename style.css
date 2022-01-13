@@ -33,7 +33,7 @@ nav {
 nav ul {
     box-shadow: 1px 1px 10px 1px #6998AB;
     border-top-right-radius: 0% !important;
-   
+
 }
 
 nav li {
@@ -74,7 +74,7 @@ nav a:hover {
 .close {
     background-color: #e2e8eb !important;
     font-weight: bold;
-    color:#406882 ;
+    color: #406882;
     border: none;
 }
 
@@ -152,10 +152,20 @@ marquee>img {
 
 }
 
+.label-progress {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #1A374D;
+}
+
+
+
 footer {
     box-shadow: 1px 1px 10px 1px #b7c9d0;
     width: 100vw;
     height: 15vh;
+    position: relative;
+    top: 4vh;
 
 }
 
@@ -167,3 +177,19 @@ footer>h5 {
 footer a {
     color: #1A374D;
 }
+
+
+@media screen and (max-width: 576px) {
+
+    #main-container {
+        width: 100vw;
+        
+    }
+
+}
+
+@media (max-width: 767px) {
+   .modal fade {
+       display: block;
+   }
+  }

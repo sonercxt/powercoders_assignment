@@ -55,7 +55,7 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">Contact me</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <button type="button" class="close" onclick="sendMail()" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
@@ -93,9 +93,8 @@
                                             <label for="floatingTextarea2">Message</label>
                                         </div>
                                     </div>
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="submit" onclick="sendMail()"
-                                        class="btn button-modal-submit">Submit</button>
+                                    <button type="button" class="btn btn-secondary" onclick="sendMail()" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn button-modal-submit">Submit</button>
                                 </form>
 
 
@@ -167,6 +166,8 @@
             </div>
 
         </footer>
+
+        <script src="./app.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
         </script>
