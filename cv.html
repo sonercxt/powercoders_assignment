@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Websites by Omer</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -20,84 +20,90 @@
 <body>
 
     <main class="d-flex flex-wrap">
-        <aside class="d-flex flex-column">
+        <aside class="d-flex flex-column d-none d-sm-block">
             <div id="nav-top">
-                <figure class="figure d-flex align-items-center flex-column">
-                    <img src="./image_files/profile_photo.jpg"
-                        class="figure-img img-fluid img-thumbnail rounded-circle mt-3" alt="..." id="profile-image">
-                    <figcaption class="figure-caption text-white">
-                        
+                <figure class="figure d-flex align-items-center flex-column justify-content-center">
+                    <img src="./image_files/profile_photo.jpg" class="figure-img img-fluid img-thumbnail rounded-circle"
+                        alt="..." id="profile-image">
 
-                    </figcaption>
                 </figure>
             </div>
 
             <nav>
                 <ul class="list-group">
-                    <li class="list-group-item text-center fw-bold"><a href="./index.html"
+                    <li class="list-group-item text-center fw-bold border-0"><a href="./index.html"
                             class="text-decoration-none">About</a>
                     </li>
-                    <li class="list-group-item text-center fw-bold  "><a href="./my_skills.html"
+                    <li class="list-group-item text-center fw-bold border-0 "><a href="./my_skills.html"
                             class="text-decoration-none">My
                             Skills</a></li>
-                    <li class="list-group-item text-center fw-bold  "><a href="./cv.html"
+                    <li class="list-group-item text-center fw-bold border-0 "><a href="./cv.html"
                             class="text-decoration-none active">CV</a>
                     </li>
-                    <li class="list-group-item text-center fw-bold "><a href="#exampleModal" data-toggle="modal"
+                    <li class="list-group-item text-center fw-bold border-0"><a href="#exampleModal" data-toggle="modal"
                             class="text-decoration-none">Contact</a></li>
 
                 </ul>
 
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Contact me</h5>
-                                <button type="button" class="close" onclick="sendMail()" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Contact me</h5>
+                                            <button type="button" class="close" data-dismiss="modal"
+                                                onclick="sendMail()" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+
+                                            <form action="https://formsubmit.co/omer.naz2388@gmail.com" method="POST">
+                                                <div class="mb-3 container-fluid p-0">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-12">
+                                                            <input type="text" class="form-control" id="form-name"
+                                                                placeholder="Name" name="name" required>
+                                                        </div>
+                                                        <div class="col-lg-6 col-12">
+                                                            <input type="email" class="form-control"
+                                                                id="exampleInputEmail1" aria-describedby="emailHelp"
+                                                                placeholder="Email" name="email" required>
+                                                        </div>
+
+                                                        <div id="emailHelp" class="form-text">We'll never share your
+                                                            personal
+                                                            information with anyone else.</div>
+                                                    </div>
+                                                </div>
 
 
-                                <form action="https://formsubmit.co/omer.naz2388@gmail.com" method="POST">
-                                    <div class="mb-3 container-fluid p-0">
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <input type="text" class="form-control" id="form-name"
-                                                    placeholder="Name" name="name" required>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                                    aria-describedby="emailHelp" placeholder="Email" name="email" required>
-                                            </div>
+                                                <div class="mb-3">
 
-                                            <div id="emailHelp" class="form-text">We'll never share your personal
-                                                information with anyone else.</div>
+                                                    <input type="text" class="form-control" placeholder="Subject"
+                                                        id="form-subject" name="subject" required>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <div class="form-floating">
+                                                        <textarea class="form-control"
+                                                            placeholder="Leave a comment here" id="floatingTextarea2"
+                                                            style="height: 100px" id="form-message" name="message"
+                                                            required></textarea>
+                                                        <label for="floatingTextarea2">Message</label>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="btn btn-secondary" onclick="sendMail()"
+                                                    data-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn button-modal-submit">Submit</button>
+                                            </form>
+
                                         </div>
                                     </div>
-
-
-                                    <div class="mb-3">
-
-                                        <input type="text" class="form-control" placeholder="Subject" id="form-subject"
-                                            name="subject" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Leave a comment here"
-                                                id="floatingTextarea2" style="height: 100px" id="form-message"
-                                                name="message" required></textarea>
-                                            <label for="floatingTextarea2">Message</label>
-                                        </div>
-                                    </div>
-                                    <button type="button" class="btn btn-secondary" onclick="sendMail()" data-dismiss="modal">Close</button>
-                                    <button type="submit" class="btn button-modal-submit">Submit</button>
-                                </form>
-
-
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -114,6 +120,46 @@
                     <p>Web Developer</p>
                 </div>
             </header>
+
+
+            <!--Navbar-->
+            <nav class="navbar navbar-light light-blue lighten-4 d-block d-sm-none navbar-hamburger "
+                style="height: 50px;">
+
+                <!-- Collapse button -->
+                <button class="navbar-toggler toggler-example ms-4 border-0" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false"
+                    aria-label="Toggle navigation"><span class="dark-blue-text"><i
+                            class="fas fa-bars fa-1x"></i></span></button>
+
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+
+                    <!-- Links -->
+
+                    <ul class="list-group mt-2">
+                        <li class="list-group-item text-center fw-bold p-1 border-0 w-90"><a href="./index.html"
+                                class="text-decoration-none">About</a>
+                        </li>
+                        <li class="list-group-item text-center fw-bold p-1 border-0"><a href="./my_skills.html"
+                                class="text-decoration-none">My
+                                Skills</a></li>
+                        <li class="list-group-item text-center fw-bold p-1 border-0"><a href="./cv.html"
+                                class="text-decoration-none active">CV</a>
+                        </li>
+                        <li class="list-group-item text-center fw-bold p-1 border-0"><a href="./contact.html"
+                                class="text-decoration-none">Contact</a></li>
+
+                    </ul>
+                    <!-- Links -->
+
+                </div>
+                <!-- Collapsible content -->
+
+            </nav>
+            <!--/.Navbar-->
+
+
             <section id="main-content">
                 <div class="container mt-5">
                     <div class="row ms-2">
@@ -121,13 +167,12 @@
                         <div class="col-lg-6">
                             <h2 class="article-tittle">CV</h2>
                             <p class="article mt-3">
-
                                 <strong> Languages:</strong> English (B1), German (A-2), Turkish
                                 (mother tongue) <br>
 
-                                <strong>IT skills:</strong>At FreeMarket in HiCoders as Full Stack Web Developer
+                                <strong>IT skills: </strong>At FreeMarket as Web Developer
                                 Experience
-                                with the following technologies ;<br>
+                                with the following technologies;<br>
                                 - HTML / CSS / Bootstrap / Responsive design <br>
                                 - JavaScript <br>
                                 - Slack / VSCode / Git / GitHub <br>
@@ -137,7 +182,8 @@
                             </p>
                         </div>
 
-                        <div class="col-lg-4 d-flex justify-content-center align-items-center  photos-content">
+                        <div
+                            class="col-lg-4 d-flex justify-content-center align-items-center  photos-content d-none d-lg-block">
                             <marquee direction="down" onmouseover="this.stop();" onmouseout="this.start();"
                                 class="border-light border-5 d-flex justify-content-center">
                                 <img src="./image_files/picture1.jpg" alt="picture1"><br>
@@ -155,7 +201,7 @@
             </section>
         </section>
 
-        <footer class="d-flex flex-column align-items-center">
+        <footer class="d-flex flex-column align-items-center mt-3" id="footer-cv">
             <h5 class="mt-3">Get In Touch</h5>
             <div>
                 <a href="https://github.com/sonercxt" target="_blank"><i class="fab fa-github-square fs-3"></i></a>
@@ -167,20 +213,23 @@
 
         </footer>
 
-        <script src="./app.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
-            integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous">
-        </script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
-            integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous">
-        </script>
 
     </main>
 
 
+
+
+
+    <script src="./app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
