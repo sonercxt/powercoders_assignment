@@ -206,13 +206,8 @@ footer a {
 
 @media screen and (max-width: 992px) {
     #exampleInputEmail1 {
-        margin-top: 2vh;
+        margin-top: 16px;
     }
-
-    /* #progress-content {
-        margin-left: 7vw;
-    } */
-
 
 }
 
@@ -241,8 +236,6 @@ footer a {
         visibility: hidden;
     }
 }
-
-
 
 
 .dark-blue-text {
